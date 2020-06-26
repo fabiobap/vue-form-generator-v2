@@ -11,6 +11,9 @@ export default {
 
 	computed: {
 		mapLink() {
+
+			let url = "";
+
 			if (this.value) {
 				let lat, lng;
 				let options = defaults(this.schema.staticMapOptions || {}, {
@@ -24,7 +27,7 @@ export default {
 				lat = this.value[options.lat];
 				lng = this.value[options.lng];
 
-				let url = `http://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${options.zoom}&size=${options.sizeX}x${options.sizeY}`;
+				url = `http://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${options.zoom}&size=${options.sizeX}x${options.sizeY}`;
 
 				let props = ["scale", "format", "maptype", "language", "region", "markers", "path", "visible", "style", "key", "signature"];
 				for (let prop of props) {
@@ -32,10 +35,9 @@ export default {
 						url += `&${prop}=${options[prop]}`;
 					}
 				}
-				if (lat && lng) {
-					return url;
-				}
 			}
+
+			return url;
 		}
 	}
 };

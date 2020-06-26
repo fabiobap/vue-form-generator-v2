@@ -38,8 +38,8 @@
 	],
 	"repository": {
 		"type": "git",
-    "url": "https://github.com/leandrocfe/vue-form-generator-v2.git",
-    "directory": "leandrocfe/vue-form-generator-v2"
+		"url": "https://github.com/leandrocfe/vue-form-generator-v2.git",
+		"directory": "leandrocfe/vue-form-generator-v2"
 	},
 	"files": [
 		"dist/vfg.js",
@@ -82,7 +82,7 @@
 		"eslint-plugin-import": "2.12.0",
 		"eslint-plugin-node": "6.0.1",
 		"eslint-plugin-prettier": "2.6.0",
-		"eslint-plugin-vue": "4.5.0",
+		"eslint-plugin-vue": "^6.2.2",
 		"expect": "23.1.0",
 		"extract-text-webpack-plugin": "3.0.2",
 		"fakerator": "0.3.0",
@@ -128,7 +128,6 @@
 	"dependencies": {
 		"vue-the-mask": "^0.11.1"
 	},
-	
 	"browserslist": [
 		"last 2 versions"
 	],
