@@ -5,34 +5,34 @@ let resources = {
 	fieldIsRequired: "Este campo é obrigatório!",
 	invalidFormat: "Formato inválido!",
 
-	numberTooSmall: "The number is too small! Minimum: {0}",
-	numberTooBig: "The number is too big! Maximum: {0}",
+	numberTooSmall: "O número é curto! Mínimo: {0}",
+	numberTooBig: "O número é longo! Máximo: {0}",
 	invalidNumber: "Número inválido",
-	invalidInteger: "The value is not an integer",
+	invalidInteger: "Este campo deve ser um inteiro!",
 
-	textTooSmall: "The length of text is too small! Current: {0}, Minimum: {1}",
-	textTooBig: "The length of text is too big! Current: {0}, Maximum: {1}",
+	textTooSmall: "O texto é curto! Atual: {0}, Mínimo: {1}",
+	textTooBig: "O texto é longo! Atual: {0}, Máximo: {1}",
 	thisNotText: "Este campo deve ser um texto!",
 
-	thisNotArray: "This is not an array!",
+	thisNotArray: "Este campo deve ser um array!",
 
-	selectMinItems: "Select minimum {0} items!",
-	selectMaxItems: "Select maximum {0} items!",
+	selectMinItems: "Selecione no mínimo {0} itens!",
+	selectMaxItems: "Selecione no máximo {0} itens!",
 
-	invalidDate: "Invalid date!",
-	dateIsEarly: "The date is too early! Current: {0}, Minimum: {1}",
-	dateIsLate: "The date is too late! Current: {0}, Maximum: {1}",
+	invalidDate: "A data é inválida!",
+	dateIsEarly: "The date is too early! Atual: {0}, Mínimo: {1}",
+	dateIsLate: "The date is too late! Atual: {0}, Máximo: {1}",
 
 	invalidEmail: "O email é inválido!",
 	invalidURL: "A url é inválida!",
 
-	invalidCard: "Invalid card format!",
-	invalidCardNumber: "Invalid card number!",
+	invalidCard: "Cartão inválido!",
+	invalidCardNumber: "Número inválido!",
 
-	invalidTextContainNumber: "Invalid text! Cannot contains numbers or special characters",
-	invalidTextContainSpec: "Invalid text! Cannot contains special characters",
+	invalidTextContainNumber: "Texto inválido! Este campo não deve conter números ou caracteres especiais.",
+	invalidTextContainSpec: "Texto inválido! Este campo não deve conter caracteres especiais.",
 	invalidPassword: "A senha deve ter no mínimo 8 caracteres, com minúsculas, maiúsculas e especial",
-	invalidPasswordConfirmation: "Invalid password confirmation"
+	invalidPasswordConfirmation: "A confirmação da senha é inválida!"
 };
 
 function checkEmpty(value, required, messages = resources) {

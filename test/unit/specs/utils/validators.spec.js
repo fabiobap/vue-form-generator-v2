@@ -177,7 +177,7 @@ describe("Validators", () => {
 			check(v.array, null, field, 0);
 		});
 
-		it("should give error if count of item is smaller than minimum and field is not required", () => {
+		it("should give error if count of item is smaller than Mínimo and field is not required", () => {
 			field.required = false;
 			check(v.array, ["Foo"], field, 1);
 		});
@@ -399,15 +399,15 @@ describe("Validators", () => {
 
 		it("should give the default error message", () => {
 			expect(v.number(null, field)[0]).to.be.equal("Este campo é obrigatório!");
-			expect(v.string("Ab", field)[0]).to.be.equal("The length of text is too small! Current: 2, Minimum: 5");
+			expect(v.string("Ab", field)[0]).to.be.equal("O texto é curto! Atual: 2, Mínimo: 5");
 		});
 
 		it("should give the localized error message", () => {
 			v.resources.fieldIsRequired = "A mezőt kötelező kitölteni!";
-			v.resources.textTooSmall = "A szöveg túl rövid. Minimum {1} a {0} helyett";
+			v.resources.textTooSmall = "A szöveg túl rövid. Mínimo {1} a {0} helyett";
 
 			expect(v.number(null, field)[0]).to.be.equal("A mezőt kötelező kitölteni!");
-			expect(v.string("Ab", field)[0]).to.be.equal("A szöveg túl rövid. Minimum 5 a 2 helyett");
+			expect(v.string("Ab", field)[0]).to.be.equal("A szöveg túl rövid. Mínimo 5 a 2 helyett");
 		});
 	});
 
@@ -429,7 +429,7 @@ describe("Validators", () => {
 		});
 
 		it("should give the default error message", () => {
-			expect(locNumber(30, field)[0]).to.be.equal("The number is too big! Maximum: 10");
+			expect(locNumber(30, field)[0]).to.be.equal("O número é longo! Máximo: 10");
 		});
 	});
 });
