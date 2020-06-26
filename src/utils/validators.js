@@ -2,17 +2,17 @@ import { defaults, isNil, isNumber, isInteger, isString, isArray, isFunction, is
 import fecha from "fecha";
 
 let resources = {
-	fieldIsRequired: "This field is required!",
-	invalidFormat: "Invalid format!",
+	fieldIsRequired: "Este campo é obrigatório!",
+	invalidFormat: "Formato inválido!",
 
 	numberTooSmall: "The number is too small! Minimum: {0}",
 	numberTooBig: "The number is too big! Maximum: {0}",
-	invalidNumber: "Invalid number",
+	invalidNumber: "Número inválido",
 	invalidInteger: "The value is not an integer",
 
 	textTooSmall: "The length of text is too small! Current: {0}, Minimum: {1}",
 	textTooBig: "The length of text is too big! Current: {0}, Maximum: {1}",
-	thisNotText: "This is not a text!",
+	thisNotText: "Este campo deve ser um texto!",
 
 	thisNotArray: "This is not an array!",
 
@@ -23,8 +23,8 @@ let resources = {
 	dateIsEarly: "The date is too early! Current: {0}, Minimum: {1}",
 	dateIsLate: "The date is too late! Current: {0}, Maximum: {1}",
 
-	invalidEmail: "Invalid e-mail address!",
-	invalidURL: "Invalid URL!",
+	invalidEmail: "O email é inválido!",
+	invalidURL: "A url é inválida!",
 
 	invalidCard: "Invalid card format!",
 	invalidCardNumber: "Invalid card number!",

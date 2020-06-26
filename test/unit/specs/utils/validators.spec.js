@@ -398,7 +398,7 @@ describe("Validators", () => {
 		};
 
 		it("should give the default error message", () => {
-			expect(v.number(null, field)[0]).to.be.equal("This field is required!");
+			expect(v.number(null, field)[0]).to.be.equal("Este campo é obrigatório!");
 			expect(v.string("Ab", field)[0]).to.be.equal("The length of text is too small! Current: 2, Minimum: 5");
 		});
 
