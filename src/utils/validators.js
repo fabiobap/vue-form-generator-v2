@@ -2,37 +2,37 @@ import { defaults, isNil, isNumber, isInteger, isString, isArray, isFunction, is
 import fecha from "fecha";
 
 let resources = {
-	fieldIsRequired: "Este campo é obrigatório!",
-	invalidFormat: "Formato inválido!",
+	fieldIsRequired: "This field is required!",
+	invalidFormat: "Invalid format!",
 
-	numberTooSmall: "O número é curto! Mínimo: {0}",
-	numberTooBig: "O número é longo! Máximo: {0}",
-	invalidNumber: "Número inválido",
-	invalidInteger: "Este campo deve ser um inteiro!",
+	numberTooSmall: "The number is too small! Minimum: {0}",
+	numberTooBig: "The number is too big! Maximum: {0}",
+	invalidNumber: "Invalid number",
+	invalidInteger: "The value is not an integer",
 
-	textTooSmall: "O texto é curto! Atual: {0}, Mínimo: {1}",
-	textTooBig: "O texto é longo! Atual: {0}, Máximo: {1}",
-	thisNotText: "Este campo deve ser um texto!",
+	textTooSmall: "The length of text is too small! Current: {0}, Minimum: {1}",
+	textTooBig: "The length of text is too big! Current: {0}, Maximum: {1}",
+	thisNotText: "This is not a text!",
 
-	thisNotArray: "Este campo deve ser um array!",
+	thisNotArray: "This is not an array!",
 
-	selectMinItems: "Selecione no mínimo {0} itens!",
-	selectMaxItems: "Selecione no máximo {0} itens!",
+	selectMinItems: "Select minimum {0} items!",
+	selectMaxItems: "Select maximum {0} items!",
 
-	invalidDate: "A data é inválida!",
-	dateIsEarly: "The date is too early! Atual: {0}, Mínimo: {1}",
-	dateIsLate: "The date is too late! Atual: {0}, Máximo: {1}",
+	invalidDate: "Invalid date!",
+	dateIsEarly: "The date is too early! Current: {0}, Minimum: {1}",
+	dateIsLate: "The date is too late! Current: {0}, Maximum: {1}",
 
-	invalidEmail: "O email é inválido!",
-	invalidURL: "A url é inválida!",
+	invalidEmail: "Invalid e-mail address!",
+	invalidURL: "Invalid URL!",
 
-	invalidCard: "Cartão inválido!",
-	invalidCardNumber: "Número inválido!",
+	invalidCard: "Invalid card format!",
+	invalidCardNumber: "Invalid card number!",
 
-	invalidTextContainNumber: "Texto inválido! Este campo não deve conter números ou caracteres especiais.",
-	invalidTextContainSpec: "Texto inválido! Este campo não deve conter caracteres especiais.",
-	invalidPassword: "A senha deve ter no mínimo 8 caracteres, com minúsculas, maiúsculas e especial",
-	invalidPasswordConfirmation: "A confirmação da senha é inválida!"
+	invalidTextContainNumber: "Invalid text! Cannot contains numbers or special characters",
+	invalidTextContainSpec: "Invalid text! Cannot contains special characters",
+	invalidPassword: "Password must have at least 8 characters, with lowercase, uppercase and special",
+	invalidPasswordConfirmation: "Password confirmation is invalid!"
 };
 
 function checkEmpty(value, required, messages = resources) {
@@ -266,7 +266,7 @@ const validators = {
 	password(value, field, model, messages = resources) {
 		let res = checkEmpty(value, field.required, messages);
 		if (res != null) return res;
-				
+
 		let re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})");
 		if (!re.test(value)) {
 			return [msg(messages.invalidPassword)];
