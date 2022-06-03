@@ -2,7 +2,7 @@
 	"name": "vue-form-generator-v2-eng",
 	"version": "1.0.3",
 	"description": "Fork do vue-form-generator com customizações e novos recursos.",
-	"homepage": "https://github.com/leandrocfe/vue-form-generator-v2#readme",
+	"homepage": "https://github.com/fabiobap/vue-form-generator-v2-eng#readme",
 	"main": "dist/vfg.js",
 	"scripts": {
 		"prebuild": "npm run test",
