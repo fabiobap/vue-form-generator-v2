@@ -1,6 +1,6 @@
 {
 	"name": "vue-form-generator-v2-eng",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Fork do vue-form-generator com customizações e novos recursos.",
 	"homepage": "https://github.com/leandrocfe/vue-form-generator-v2#readme",
 	"main": "dist/vfg.js",
